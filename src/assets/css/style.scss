@@ -1,0 +1,639 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta&family=Inconsolata&display=swap');
+
+$primaryBackgroundColor: #1B1E21;
+
+$secondaryBackgroundColor: #2F363D;
+
+$primaryTextColor: #CD5F51;
+
+$secondaryTextColor: #FFAEA3;
+
+$primaryBackgroundColorInRGB: rgba(27, 30, 33, 0.1);
+
+$secondaryBackgroundColorInRGB: rgba(47, 54, 61, 0.1);
+
+$primaryTextColorInRGB: rgba(205, 95, 81, 0.1);
+
+$secondaryTextColorInRGB: rgba(255, 174, 163, 0.1);
+
+$allerta: 'Allerta', sans-serif;
+
+$code: 'Inconsolata', monospace;
+
+a {
+  text-decoration: none;
+
+  transition: all 0.2s ease;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+body {
+  font-family: $allerta;
+  background: $primaryBackgroundColor;
+  overflow-x: hidden;
+}
+
+.container-fluid {
+  padding: 0;
+
+  *:not([class*='offset-']) {
+    margin: 0;
+  }
+}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+@include keyframes(parallax) {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.background-animation-light {
+  background-size: 4000px;
+  //background-repeat: no-repeat;
+  background-image: linear-gradient(48deg, $secondaryBackgroundColorInRGB, $secondaryTextColorInRGB, $secondaryBackgroundColorInRGB);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1);
+  @include animation('parallax 10s infinite');
+  animation-timing-function: ease;
+}
+
+.background-animation-dark {
+  background-size: 4000px;
+  //background-repeat: no-repeat;
+  background-image: linear-gradient(48deg, $primaryBackgroundColorInRGB, $primaryTextColorInRGB, $primaryBackgroundColorInRGB);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1);
+  @include animation('parallax 10s infinite');
+  animation-timing-function: ease;
+}
+
+
+header {
+
+  .row {
+    .col {
+      nav {
+        padding: 10px;
+        background: $primaryBackgroundColor;
+
+        .navbar-brand {
+          a {
+            color: $primaryTextColor;
+
+            img {
+              max-width: 60px;
+            }
+          }
+        }
+
+        .navbar-collapse {
+          ul {
+            li {
+              &.active {
+                a {
+                  color: $primaryTextColor;
+                }
+              }
+
+              a {
+                color: $secondaryTextColor;
+                font-family: $code;
+                font-size: 24px;
+                border: 1px solid transparent;
+
+                &.active {
+                  color: $primaryTextColor;
+                }
+
+                &:hover {
+                  border-bottom: 1px solid $secondaryTextColor;
+                  color: $secondaryTextColor;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  background: $secondaryBackgroundColor;
+
+  .image {
+    padding: 30px;
+
+    img {
+
+    }
+  }
+
+  .description {
+    padding: 30px;
+
+    h1 {
+      color: $primaryTextColor;
+      margin-bottom: 40px;
+    }
+
+    .col {
+      color: $secondaryTextColor;
+      font-family: $code;
+      font-size: 18px;
+    }
+  }
+}
+
+.description {
+  .row {
+    .col {
+
+
+      h2 {
+        padding: 40px 15px;
+        color: $primaryTextColor;
+        font-size: 34px;
+      }
+
+      .col {
+        padding: 15px;
+        color: $secondaryTextColor;
+        font-family: $code;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.timeline {
+  .row {
+    .col {
+
+      h2 {
+        color: $primaryTextColor;
+        padding: 60px 15px 30px;
+      }
+
+      .timeline-wrapper {
+        list-style: none;
+        position: relative;
+
+        &:before {
+          top: 0;
+          bottom: 0;
+          position: absolute;
+          content: " ";
+          width: 2px;
+          background-color: $primaryTextColor;
+          left: 50%;
+          margin-left: -1.5px;
+        }
+
+        .clearFix {
+          clear: both;
+          height: 0;
+        }
+
+        .timeline-row {
+          border-bottom: dashed 1px $secondaryTextColor;
+          position: relative;
+
+          &.timeline-row-top {
+            height: 60px;
+          }
+
+          .timeline-item {
+            padding: 20px 0;
+
+            .timeline-panel {
+              border: 1px solid $primaryBackgroundColorInRGB;
+              border-radius: 3px;
+              background-color: $secondaryBackgroundColor;
+              color: $secondaryTextColor;
+              padding: 10px;
+              position: relative;
+              -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+              box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+
+              .timeline-panel-ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                  color: $primaryTextColor;
+
+                  span.importo {
+                    color: $primaryTextColor;
+                    font-size: 16px;
+                  }
+
+                  span.causale {
+                    color: $secondaryTextColor;
+                    font-size: 14px;
+
+                    .responsibilities-title {
+                      color: $secondaryTextColor;
+                      font-size: 16px;
+                      font-family: $code;
+                      font-weight: 600;
+                    }
+
+                    ul {
+                      li {
+                        color: $secondaryTextColor;
+                        font-size: 13px;
+                      }
+                    }
+
+
+                  }
+
+                  .text-muted {
+                    font-size: 14px;
+                    font-weight: 600;
+                    font-family: $code;
+                    color: $primaryTextColor !important;
+                  }
+
+                }
+              }
+            }
+
+          }
+        }
+
+        .timeline-badge {
+          color: #fff;
+          width: 50px;
+          height: 50px;
+          font-size: 1.2em;
+          text-align: center;
+          position: absolute;
+          top: 20px;
+          left: 50%;
+          margin-left: -25px;
+          background-color: $secondaryTextColor;
+          z-index: 100;
+          border-radius: 50%;
+
+          span.timeline-balloon-date-month {
+            font-size: 12px;
+            position: relative;
+            display: block;
+            top: 10px;
+          }
+
+          span.timeline-balloon-date-year {
+            font-size: 12px;
+            position: relative;
+            display: block;
+            top: 5px;
+          }
+
+
+          &.timeline-filter-movement {
+            background-color: #ffffff;
+            font-size: 1.7em;
+            height: 35px;
+            margin-left: -18px;
+            width: 35px;
+            top: 40px;
+
+            a span {
+              color: $secondaryTextColorInRGB;
+              font-size: 1.3em;
+              top: -1px;
+            }
+          }
+
+          &.timeline-future-movement {
+            background-color: #ffffff;
+            height: 35px;
+            width: 35px;
+            font-size: 1.7em;
+            top: -16px;
+            margin-left: -18px;
+
+            a span {
+              color: $secondaryTextColorInRGB;
+              font-size: .9em;
+              top: 2px;
+              left: 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.skills {
+  background: $secondaryBackgroundColor;
+
+  .row {
+    .col {
+      h2 {
+        color: $primaryTextColor;
+        padding: 60px 15px 30px;
+      }
+
+      .row {
+        .skill-item {
+          padding: 15px;
+
+          .skill-label {
+            font-family: $code;
+            font-size: 18px;
+            font-weight: 600;
+            color: $primaryTextColor;
+          }
+
+          .skill-progress {
+            .progress {
+              background: $primaryBackgroundColor;
+
+              .progress-bar-striped {
+                background-image: linear-gradient(45deg, $primaryTextColor 25%, $secondaryTextColor 25%, $secondaryTextColor 50%, $primaryTextColor 50%, $primaryTextColor 75%, $secondaryTextColor 75%, $secondaryTextColor);
+                background-size: 1rem 1rem;
+                color: $primaryBackgroundColor;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.projects {
+  .row {
+    .col {
+      padding-bottom: 30px;
+
+      h2 {
+        color: $primaryTextColor;
+        padding: 60px 15px 30px;
+      }
+
+      .row {
+        .project {
+          img {
+          }
+
+          .name {
+            color: $secondaryTextColor;
+            font-family: $code;
+            font-size: 20px;
+            font-weight: 600;
+          }
+
+          .description {
+            color: $secondaryTextColor;
+            font-size: 14px;
+          }
+
+          .link {
+            margin-top: 20px;
+
+            a {
+              font-family: $code;
+              color: $primaryTextColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  background: $secondaryBackgroundColor;
+
+  .row {
+    .col {
+      padding-bottom: 30px;
+
+      h2 {
+        color: $primaryTextColor;
+        padding: 60px 15px 30px;
+      }
+
+      .description {
+        color: $secondaryTextColor;
+        font-size: 14px;
+
+        a {
+          color: $primaryTextColor;
+          font-weight: 600;
+
+          transition: all 0.2s ease;
+          border-bottom: 1px solid transparent;
+
+          &:hover {
+            border-bottom: 1px solid $primaryTextColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  .row {
+    .col {
+
+
+      .row {
+        .col-sm-6 {
+          padding: 40px 20px 0;
+
+          ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+            li {
+              display: inline-block;
+              padding: 0 20px 0 0;
+
+              a {
+                color: $primaryTextColor;
+                transition: all 0.2s ease;
+                border-bottom: 1px solid transparent;
+
+                &:hover {
+                  border-bottom: 1px solid $primaryTextColor;
+
+                  i {
+                    color: $secondaryTextColor;
+                  }
+                }
+
+                &.active {
+                  color: $secondaryTextColor;
+                }
+
+                i {
+                  font-size: 40px;
+                  transition: all 0.2s ease;
+                }
+              }
+            }
+          }
+        }
+
+        .col {
+          padding: 20px 20px 40px;
+          color: $secondaryTextColor;
+          font-family: $code;
+        }
+      }
+    }
+  }
+}
+
+.about-me {
+  .row {
+    .col {
+      h2 {
+        color: $primaryTextColor;
+        padding: 60px 15px 30px;
+      }
+
+      .description {
+        color: $secondaryTextColor;
+        font-family: $code;
+        padding-bottom: 50px;
+      }
+    }
+  }
+}
+
+.contact-me {
+  .row {
+    .col {
+      h2 {
+        color: $primaryTextColor;
+        padding: 60px 15px 30px;
+      }
+
+      .description {
+        color: $secondaryTextColor;
+        font-family: $code;
+        padding-bottom: 50px;
+
+        a {
+          color: $primaryTextColor;
+          font-weight: 600;
+
+          transition: all 0.2s ease;
+          border-bottom: 1px solid transparent;
+
+          &:hover {
+            border-bottom: 1px solid $primaryTextColor;
+          }
+        }
+      }
+
+      .form {
+        margin-bottom: 30px;
+
+        form {
+          .form-group {
+
+
+            .row {
+              .col-sm-6 {
+                padding: 15px;
+              }
+
+              .col {
+                padding: 15px;
+              }
+            }
+
+            .form-label {
+              color: $primaryTextColor;
+
+              .required {
+                color: $secondaryTextColor;
+                font-family: $code;
+              }
+            }
+
+            .form-control {
+              border: 1px solid $secondaryTextColor;
+              color: $secondaryTextColor;
+              font-family: $code;
+              outline: none;
+              border-radius: 0;
+              background: $secondaryBackgroundColor;
+              box-shadow: none;
+              transition: all 0.2s ease;
+
+              &::placeholder {
+                color: $primaryTextColor;
+              }
+
+              &:focus {
+                border: 1px solid $primaryTextColor;
+              }
+            }
+
+            button {
+              border-radius: 0;
+              background: $primaryTextColor;
+              box-shadow: none;
+              color: $primaryBackgroundColor;
+              outline: none;
+              border: 1px solid transparent;
+              transition: all 0.2s ease;
+              padding: 10px 30px;
+
+              &:hover {
+                border: 1px solid $primaryTextColor;
+                background: $primaryBackgroundColor;
+                color: $primaryTextColor;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

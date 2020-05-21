@@ -1,0 +1,551 @@
+@import url("https://fonts.googleapis.com/css2?family=Allerta&family=Inconsolata&display=swap");
+
+a {
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Allerta", sans-serif;
+    background: #1B1E21;
+    overflow-x: hidden;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.container-fluid *:not([class*='offset-']) {
+    margin: 0;
+}
+
+@-webkit-keyframes parallax {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@-moz-keyframes parallax {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@-ms-keyframes parallax {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@-o-keyframes parallax {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes parallax {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.background-animation-light {
+    background-size: 4000px;
+    background-image: linear-gradient(48deg, rgba(47, 54, 61, 0.1), rgba(255, 174, 163, 0.1), rgba(47, 54, 61, 0.1));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1);
+    -webkit-animation: parallax 10s infinite;
+    -moz-animation: parallax 10s infinite;
+    -ms-animation: parallax 10s infinite;
+    -o-animation: parallax 10s infinite;
+    animation: parallax 10s infinite;
+    animation-timing-function: ease;
+}
+
+.background-animation-dark {
+    background-size: 4000px;
+    background-image: linear-gradient(48deg, rgba(27, 30, 33, 0.1), rgba(205, 95, 81, 0.1), rgba(27, 30, 33, 0.1));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1);
+    -webkit-animation: parallax 10s infinite;
+    -moz-animation: parallax 10s infinite;
+    -ms-animation: parallax 10s infinite;
+    -o-animation: parallax 10s infinite;
+    animation: parallax 10s infinite;
+    animation-timing-function: ease;
+}
+
+header .row .col nav {
+    padding: 10px;
+    background: #1B1E21;
+}
+
+header .row .col nav .navbar-brand a {
+    color: #CD5F51;
+}
+
+header .row .col nav .navbar-brand a img {
+    max-width: 60px;
+}
+
+header .row .col nav .navbar-collapse ul li.active a {
+    color: #CD5F51;
+}
+
+header .row .col nav .navbar-collapse ul li a {
+    color: #FFAEA3;
+    font-family: "Inconsolata", monospace;
+    font-size: 24px;
+    border: 1px solid transparent;
+}
+
+header .row .col nav .navbar-collapse ul li a.active {
+    color: #CD5F51;
+}
+
+header .row .col nav .navbar-collapse ul li a:hover {
+    border-bottom: 1px solid #FFAEA3;
+    color: #FFAEA3;
+}
+
+.hero {
+    background: #2F363D;
+}
+
+.hero .image {
+    padding: 30px;
+}
+
+.hero .description {
+    padding: 30px;
+}
+
+.hero .description h1 {
+    color: #CD5F51;
+    margin-bottom: 40px;
+}
+
+.hero .description .col {
+    color: #FFAEA3;
+    font-family: "Inconsolata", monospace;
+    font-size: 18px;
+}
+
+.description .row .col h2 {
+    padding: 40px 15px;
+    color: #CD5F51;
+    font-size: 34px;
+}
+
+.description .row .col .col {
+    padding: 15px;
+    color: #FFAEA3;
+    font-family: "Inconsolata", monospace;
+    font-size: 18px;
+}
+
+.timeline .row .col h2 {
+    color: #CD5F51;
+    padding: 60px 15px 30px;
+}
+
+.timeline .row .col .timeline-wrapper {
+    list-style: none;
+    position: relative;
+}
+
+.timeline .row .col .timeline-wrapper:before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 2px;
+    background-color: #CD5F51;
+    left: 50%;
+    margin-left: -1.5px;
+}
+
+.timeline .row .col .timeline-wrapper .clearFix {
+    clear: both;
+    height: 0;
+}
+
+.timeline .row .col .timeline-wrapper .timeline-row {
+    border-bottom: dashed 1px #FFAEA3;
+    position: relative;
+}
+
+.timeline .row .col .timeline-wrapper .timeline-row.timeline-row-top {
+    height: 60px;
+}
+
+.timeline .row .col .timeline-wrapper .timeline-row .timeline-item {
+    padding: 20px 0;
+}
+
+.timeline .row .col .timeline-wrapper .timeline-row .timeline-item .timeline-panel {
+    border: 1px solid rgba(27, 30, 33, 0.1);
+    border-radius: 3px;
+    background-color: #2F363D;
+    color: #FFAEA3;
+    padding: 10px;
+    position: relative;
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+
+.timeline .row .col .timeline-wrapper .timeline-row .timeline-item .timeline-panel .timeline-panel-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline .row .col .timeline-wrapper .timeline-row .timeline-item .timeline-panel .timeline-panel-ul li {
+    color: #CD5F51;
+}
+
+.timeline .row .col .timeline-wrapper .timeline-row .timeline-item .timeline-panel .timeline-panel-ul li span.importo {
+    color: #CD5F51;
+    font-size: 16px;
+}
+
+.timeline .row .col .timeline-wrapper .timeline-row .timeline-item .timeline-panel .timeline-panel-ul li span.causale {
+    color: #FFAEA3;
+    font-size: 14px;
+}
+
+.timeline .row .col .timeline-wrapper .timeline-row .timeline-item .timeline-panel .timeline-panel-ul li span.causale .responsibilities-title {
+    color: #FFAEA3;
+    font-size: 16px;
+    font-family: "Inconsolata", monospace;
+    font-weight: 600;
+}
+
+.timeline .row .col .timeline-wrapper .timeline-row .timeline-item .timeline-panel .timeline-panel-ul li span.causale ul li {
+    color: #FFAEA3;
+    font-size: 13px;
+}
+
+.timeline .row .col .timeline-wrapper .timeline-row .timeline-item .timeline-panel .timeline-panel-ul li .text-muted {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Inconsolata", monospace;
+    color: #CD5F51 !important;
+}
+
+.timeline .row .col .timeline-wrapper .timeline-badge {
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2em;
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    margin-left: -25px;
+    background-color: #FFAEA3;
+    z-index: 100;
+    border-radius: 50%;
+}
+
+.timeline .row .col .timeline-wrapper .timeline-badge span.timeline-balloon-date-month {
+    font-size: 12px;
+    position: relative;
+    display: block;
+    top: 10px;
+}
+
+.timeline .row .col .timeline-wrapper .timeline-badge span.timeline-balloon-date-year {
+    font-size: 12px;
+    position: relative;
+    display: block;
+    top: 5px;
+}
+
+.timeline .row .col .timeline-wrapper .timeline-badge.timeline-filter-movement {
+    background-color: #ffffff;
+    font-size: 1.7em;
+    height: 35px;
+    margin-left: -18px;
+    width: 35px;
+    top: 40px;
+}
+
+.timeline .row .col .timeline-wrapper .timeline-badge.timeline-filter-movement a span {
+    color: rgba(255, 174, 163, 0.1);
+    font-size: 1.3em;
+    top: -1px;
+}
+
+.timeline .row .col .timeline-wrapper .timeline-badge.timeline-future-movement {
+    background-color: #ffffff;
+    height: 35px;
+    width: 35px;
+    font-size: 1.7em;
+    top: -16px;
+    margin-left: -18px;
+}
+
+.timeline .row .col .timeline-wrapper .timeline-badge.timeline-future-movement a span {
+    color: rgba(255, 174, 163, 0.1);
+    font-size: .9em;
+    top: 2px;
+    left: 1px;
+}
+
+.skills {
+    background: #2F363D;
+}
+
+.skills .row .col h2 {
+    color: #CD5F51;
+    padding: 60px 15px 30px;
+}
+
+.skills .row .col .row .skill-item {
+    padding: 15px;
+}
+
+.skills .row .col .row .skill-item .skill-label {
+    font-family: "Inconsolata", monospace;
+    font-size: 18px;
+    font-weight: 600;
+    color: #CD5F51;
+}
+
+.skills .row .col .row .skill-item .skill-progress .progress {
+    background: #1B1E21;
+}
+
+.skills .row .col .row .skill-item .skill-progress .progress .progress-bar-striped {
+    background-image: linear-gradient(45deg, #CD5F51 25%, #FFAEA3 25%, #FFAEA3 50%, #CD5F51 50%, #CD5F51 75%, #FFAEA3 75%, #FFAEA3);
+    background-size: 1rem 1rem;
+    color: #1B1E21;
+}
+
+.projects .row .col {
+    padding-bottom: 30px;
+}
+
+.projects .row .col h2 {
+    color: #CD5F51;
+    padding: 60px 15px 30px;
+}
+
+.projects .row .col .row .project .name {
+    color: #FFAEA3;
+    font-family: "Inconsolata", monospace;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.projects .row .col .row .project .description {
+    color: #FFAEA3;
+    font-size: 14px;
+}
+
+.projects .row .col .row .project .link {
+    margin-top: 20px;
+}
+
+.projects .row .col .row .project .link a {
+    font-family: "Inconsolata", monospace;
+    color: #CD5F51;
+}
+
+.contact {
+    background: #2F363D;
+}
+
+.contact .row .col {
+    padding-bottom: 30px;
+}
+
+.contact .row .col h2 {
+    color: #CD5F51;
+    padding: 60px 15px 30px;
+}
+
+.contact .row .col .description {
+    color: #FFAEA3;
+    font-size: 14px;
+}
+
+.contact .row .col .description a {
+    color: #CD5F51;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.contact .row .col .description a:hover {
+    border-bottom: 1px solid #CD5F51;
+}
+
+footer .row .col .row .col-sm-6 {
+    padding: 40px 20px 0;
+}
+
+footer .row .col .row .col-sm-6 ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+footer .row .col .row .col-sm-6 ul li {
+    display: inline-block;
+    padding: 0 20px 0 0;
+}
+
+footer .row .col .row .col-sm-6 ul li a {
+    color: #CD5F51;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid transparent;
+}
+
+footer .row .col .row .col-sm-6 ul li a:hover {
+    border-bottom: 1px solid #CD5F51;
+}
+
+footer .row .col .row .col-sm-6 ul li a:hover i {
+    color: #FFAEA3;
+}
+
+footer .row .col .row .col-sm-6 ul li a.active {
+    color: #FFAEA3;
+}
+
+footer .row .col .row .col-sm-6 ul li a i {
+    font-size: 40px;
+    transition: all 0.2s ease;
+}
+
+footer .row .col .row .col {
+    padding: 20px 20px 40px;
+    color: #FFAEA3;
+    font-family: "Inconsolata", monospace;
+}
+
+.about-me .row .col h2 {
+    color: #CD5F51;
+    padding: 60px 15px 30px;
+}
+
+.about-me .row .col .description {
+    color: #FFAEA3;
+    font-family: "Inconsolata", monospace;
+    padding-bottom: 50px;
+}
+
+.contact-me .row .col h2 {
+    color: #CD5F51;
+    padding: 60px 15px 30px;
+}
+
+.contact-me .row .col .description {
+    color: #FFAEA3;
+    font-family: "Inconsolata", monospace;
+    padding-bottom: 50px;
+}
+
+.contact-me .row .col .description a {
+    color: #CD5F51;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.contact-me .row .col .description a:hover {
+    border-bottom: 1px solid #CD5F51;
+}
+
+.contact-me .row .col .form {
+    margin-bottom: 30px;
+}
+
+.contact-me .row .col .form form .form-group .row .col-sm-6 {
+    padding: 15px;
+}
+
+.contact-me .row .col .form form .form-group .row .col {
+    padding: 15px;
+}
+
+.contact-me .row .col .form form .form-group .form-label {
+    color: #CD5F51;
+}
+
+.contact-me .row .col .form form .form-group .form-label .required {
+    color: #FFAEA3;
+    font-family: "Inconsolata", monospace;
+}
+
+.contact-me .row .col .form form .form-group .form-control {
+    border: 1px solid #FFAEA3;
+    color: #FFAEA3;
+    font-family: "Inconsolata", monospace;
+    outline: none;
+    border-radius: 0;
+    background: #2F363D;
+    box-shadow: none;
+    transition: all 0.2s ease;
+}
+
+.contact-me .row .col .form form .form-group .form-control::placeholder {
+    color: #CD5F51;
+}
+
+.contact-me .row .col .form form .form-group .form-control:focus {
+    border: 1px solid #CD5F51;
+}
+
+.contact-me .row .col .form form .form-group button {
+    border-radius: 0;
+    background: #CD5F51;
+    box-shadow: none;
+    color: #1B1E21;
+    outline: none;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    padding: 10px 30px;
+}
+
+.contact-me .row .col .form form .form-group button:hover {
+    border: 1px solid #CD5F51;
+    background: #1B1E21;
+    color: #CD5F51;
+}
+
+/*# sourceMappingURL=style.css.map */
