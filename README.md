@@ -1,6 +1,6 @@
 # Portfolio Template
 
-Portfolio template is a website I developed for showcase my projects and skills.
+Portfolio template is a website I developed with React.js for showcasing my projects and skills.
 
 ### Demo
 
