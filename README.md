@@ -2,6 +2,10 @@
 
 Portfolio template is a website I developed for showcase my projects and skills.
 
+### Demo
+
+http://www.janaka.tech
+
 ### How to run the project
 
 ```
